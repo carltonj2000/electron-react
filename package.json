@@ -1,5 +1,5 @@
 {
-  "name": "electron-react",
+  "name": "cj-scripts",
   "version": "0.1.0",
   "private": true,
   "main": "src/electron-starter.js",
@@ -18,11 +18,15 @@
     "electron-dev-win": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
     "electron": "electron .",
     "wait-electron": "wait-on http://localhost:3000 && npm run electron-dev-start",
-    "start": "concurrently 'npm run react-start' 'npm run wait-electron'"
+    "start": "concurrently 'npm run react-start' 'npm run wait-electron'",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . cj-scripts --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Carlton's Scripts\"",
+    "package-linux": "electron-packager . cj-scripts --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
     "electron": "^1.7.9",
+    "electron-packager": "^9.1.0",
     "wait-on": "^2.0.2"
   }
 }
