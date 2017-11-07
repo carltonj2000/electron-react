@@ -1,7 +1,7 @@
-# Understanding Redux Middleware
+# Electron And React
 
 This repository code is based on the
-[Understanding Redux Middleware](https://medium.com/@meagle/understanding-87566abcfb7a)
+[Electron app using create-react-app](https://medium.freecodecamp.org/building-an-electron-application-with-create-react-app-97945861647c)
 article.
 
 [Electron skeleton code](https://github.com/electron/electron-quick-start/blob/master/main.js)
