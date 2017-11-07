@@ -1,0 +1,28 @@
+{
+  "name": "electron-react",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/electron-starter.js",
+  "homepage": "./",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "react-start": "BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron-dev-start": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "electron-dev-win": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "electron": "electron .",
+    "wait-electron": "wait-on http://localhost:3000 && npm run electron-dev-start",
+    "start": "concurrently 'npm run react-start' 'npm run wait-electron'"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "electron": "^1.7.9",
+    "wait-on": "^2.0.2"
+  }
+}
